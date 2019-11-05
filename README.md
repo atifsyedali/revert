@@ -37,8 +37,8 @@ jobs:
     - uses: actions/checkout@v1
     - name: Automatic Revert
       uses: srt32/revert@v0.0.1
-      with:
-       username: ${{ secrets.TOKEN }}
+      env:
+       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
  ```      
 
 This Action is heavily inspired by [rebase](https://github.com/cirrus-actions/rebase).
